@@ -1,0 +1,48 @@
+/* Design tokens de SaborUPC: solo variables CSS, sin lógica ni selectores de componentes.
+   Las variables heredan a través del Shadow DOM, así que también llegan a <mfe-perfil>.
+   Cada consumidor las usa con var(--token, valor-de-respaldo), de modo que su modo
+   independiente sigue viéndose igual aunque este servidor (8085) esté caído. */
+:root {
+  /* Color: marca */
+  --upc-color-primario: #0b4f8a;
+  --upc-color-primario-claro: #1283c8;
+  --upc-color-primario-suave: #eaf3fb;
+  --upc-color-sobre-primario: #ffffff;
+  --upc-color-sobre-primario-suave: #dce9f5;
+  --upc-color-acento: #f2c200;
+
+  /* Color: estados */
+  --upc-color-exito: #3e9f3a;
+  --upc-color-exito-oscuro: #1b7a3e;
+  --upc-color-exito-fondo: #eaf6ea;
+  --upc-color-peligro: #c0392b;
+  --upc-color-peligro-texto: #a12a1e;
+  --upc-color-peligro-fondo: #fdecea;
+
+  /* Color: superficies y texto */
+  --upc-color-fondo: #f4f6f8;
+  --upc-color-superficie: #ffffff;
+  --upc-color-borde: #dde3ea;
+  --upc-color-borde-input: #bbbbbb;
+  --upc-color-texto: #222222;
+  --upc-color-texto-suave: #777777;
+  --upc-color-texto-tenue: #888888;
+
+  /* Tipografía */
+  --upc-fuente-base: Arial, Helvetica, sans-serif;
+  --upc-texto-xs: 12px;
+  --upc-texto-sm: 14px;
+  --upc-texto-md: 16px;
+  --upc-texto-lg: 20px;
+
+  /* Espaciado */
+  --upc-espacio-1: 4px;
+  --upc-espacio-2: 8px;
+  --upc-espacio-3: 16px;
+  --upc-espacio-4: 24px;
+  --upc-espacio-5: 32px;
+
+  /* Forma */
+  --upc-radio-1: 4px;
+  --upc-radio-2: 6px;
+}
