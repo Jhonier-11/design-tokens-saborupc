@@ -1,35 +1,41 @@
 /* Design tokens de SaborUPC: solo variables CSS, sin lógica ni selectores de componentes.
    Las variables heredan a través del Shadow DOM, así que también llegan a <mfe-perfil>.
    Cada consumidor las usa con var(--token, valor-de-respaldo), de modo que su modo
-   independiente sigue viéndose igual aunque este servidor (8085) esté caído. */
+   independiente sigue viéndose igual aunque este servidor (8085) esté caído.
+
+   Dirección visual: cocina típica vallenata. Papel crema, verde bosque dominante,
+   maíz y ají como acentos. Las fuentes se cargan desde el HTML de cada página
+   (Google Fonts); si no están disponibles se usan las de respaldo. */
 :root {
-  /* Color: marca */
-  --upc-color-primario: #0b4f8a;
-  --upc-color-primario-claro: #1283c8;
-  --upc-color-primario-suave: #eaf3fb;
-  --upc-color-sobre-primario: #ffffff;
-  --upc-color-sobre-primario-suave: #dce9f5;
-  --upc-color-acento: #f2c200;
+  /* Color: marca (verde bosque) */
+  --upc-color-primario: #12432b;
+  --upc-color-primario-claro: #1e6b40;
+  --upc-color-primario-suave: #e3efe4;
+  --upc-color-sobre-primario: #fbf5e6;
+  --upc-color-sobre-primario-suave: #cfe0cf;
+  --upc-color-acento: #f2b632;
 
   /* Color: estados */
-  --upc-color-exito: #3e9f3a;
-  --upc-color-exito-oscuro: #1b7a3e;
-  --upc-color-exito-fondo: #eaf6ea;
-  --upc-color-peligro: #c0392b;
-  --upc-color-peligro-texto: #a12a1e;
-  --upc-color-peligro-fondo: #fdecea;
+  --upc-color-exito: #2f8f4e;
+  --upc-color-exito-oscuro: #1b6b3a;
+  --upc-color-exito-fondo: #e4f1e1;
+  --upc-color-peligro: #b8432b;
+  --upc-color-peligro-texto: #8f2f1c;
+  --upc-color-peligro-fondo: #f9e6dd;
 
   /* Color: superficies y texto */
-  --upc-color-fondo: #f4f6f8;
-  --upc-color-superficie: #ffffff;
-  --upc-color-borde: #dde3ea;
-  --upc-color-borde-input: #bbbbbb;
-  --upc-color-texto: #222222;
-  --upc-color-texto-suave: #777777;
-  --upc-color-texto-tenue: #888888;
+  --upc-color-fondo: #f4eedd;
+  --upc-color-superficie: #fffcf3;
+  --upc-color-borde: #e3d9bd;
+  --upc-color-borde-input: #cdbf9c;
+  --upc-color-texto: #1c2b21;
+  --upc-color-texto-suave: #4a5848;
+  --upc-color-texto-tenue: #5f6a58;
 
   /* Tipografía */
-  --upc-fuente-base: Arial, Helvetica, sans-serif;
+  --upc-fuente-base: 'Hanken Grotesk', system-ui, sans-serif;
+  --upc-fuente-display: 'Fraunces', Georgia, serif;
+  --upc-fuente-mono: 'IBM Plex Mono', Consolas, monospace;
   --upc-texto-xs: 12px;
   --upc-texto-sm: 14px;
   --upc-texto-md: 16px;
@@ -42,7 +48,9 @@
   --upc-espacio-4: 24px;
   --upc-espacio-5: 32px;
 
-  /* Forma */
-  --upc-radio-1: 4px;
-  --upc-radio-2: 6px;
+  /* Forma y profundidad */
+  --upc-radio-1: 8px;
+  --upc-radio-2: 14px;
+  --upc-sombra-1: 0 1px 2px rgba(18, 67, 43, .08), 0 8px 18px -10px rgba(18, 67, 43, .22);
+  --upc-sombra-2: 0 2px 4px rgba(18, 67, 43, .10), 0 20px 34px -16px rgba(18, 67, 43, .38);
 }
